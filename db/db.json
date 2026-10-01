@@ -1,4 +1,3 @@
-
 {
   "usuarios": [
     {
@@ -124,7 +123,7 @@
       "longitude": -43.9712,
       "rating": 4.7,
       "ratings": 234,
-      "image": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/ao-ar-livre-e-esportes/2021-11/pampulha_qu4rto-studio-0140-1.jpg",
+      "image": "https://images.pexels.com/photos/38471099/pexels-photo-38471099.jpeg",
       "tags": [
         "cultura"
       ],
@@ -154,7 +153,7 @@
       "longitude": -43.9348,
       "rating": 4.6,
       "ratings": 234,
-      "image": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/ao-ar-livre-e-esportes/2021-11/foto-pbh.jpg",
+      "image": "https://images.unsplash.com/photo-1697443130875-954b19aabaef?w=400&h=300&fit=crop",
       "tags": [
         "parque"
       ],
@@ -182,7 +181,7 @@
       "endereco": "Rua dos Aimorés, 629 - Funcionários, Belo Horizonte",
       "rating": 4.3,
       "ratings": 48,
-      "image": "https://scontent.fplu4-1.fna.fbcdn.net/v/t51.82787-15/562561458_18118746181515050_2890211934299688029_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=rvT_CZZJTWQQ7kNvwEZ1WSz&_nc_oc=AdnASnAfohf7ywO9epTqkFLkFdnADziQD_toVb18XWFDibB8mCroJycIqfbP5KYSwTgwu38rTVJAyxqLwAfQ6fxg&_nc_zt=23&_nc_ht=scontent.fplu4-1.fna&_nc_gid=2qV8ieFTXbQbRfbTry6LHw&oh=00_Afnkeg7wOQ2fpX36XbgghkWqalwpESZ1EMGULMYtBttqwA&oe=6937FBF0",
+      "image": "https://images.unsplash.com/photo-1594035900144-17151c9910af?w=400&h=300&fit=crop",
       "tags": [
         "dates"
       ],
@@ -208,7 +207,7 @@
       "endereco": "Av. Assis Chateaubriand, 170 - Floresta, Belo Horizonte",
       "rating": 4.2,
       "ratings": 64,
-      "image": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/comer-e-beber/2022-07/280309779_3234387410179147_6904796014869648755_n.jpg",
+      "image": "https://images.unsplash.com/photo-1651511806003-30e8a55b5fce?w=400&h=300&fit=crop",
       "tags": [
         "dates"
       ],
@@ -221,7 +220,7 @@
       "endereco": "Rua Rio Grande do Norte, 311 - Funcionários, Belo Horizonte",
       "rating": 4.4,
       "ratings": 88,
-      "image": "https://lh6.googleusercontent.com/proxy/F0CSgq9lAcPXIVsgIpaINaMW_xOda3j_eANyginOFbY7NHAccki27stzJ50dEpFaPg79GS1qxkrrGTl55t1Wy2PzZMxrmHcA7yv5tL3vS4kDpyQXlvKiO9xcr72ErIlczHEFiOSLmCJLRxoh1q2QysJauQ5NlbQDnEHjPkpB2JsR",
+      "image": "https://images.pexels.com/photos/34692780/pexels-photo-34692780.jpeg",
       "tags": [
         "dates"
       ],
@@ -260,7 +259,7 @@
       "endereco": "Rua Juramento, 202 - Pompéia, Belo Horizonte",
       "rating": 4.3,
       "ratings": 53,
-      "image": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/comer-e-beber/2019-09/202-1_0.jpg",
+      "image": "https://images.pexels.com/photos/29190272/pexels-photo-29190272.jpeg",
       "tags": [
         "dates"
       ],
@@ -286,7 +285,7 @@
       "endereco": "Rua Sergipe, 629 - Savassi, Belo Horizonte",
       "rating": 4.2,
       "ratings": 79,
-      "image": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/comer-e-beber/2024-05/441082812_471215178660143_6792694318693077820_n.jpg",
+      "image": "https://images.unsplash.com/photo-1558210598-89ba75b1724e?w=400&h=300&fit=crop",
       "tags": [
         "dates"
       ],
@@ -299,7 +298,7 @@
       "endereco": "Rua Rio de Janeiro, 471 - Centro, Belo Horizonte",
       "rating": 4.5,
       "ratings": 95,
-      "image": "https://mgturismo.com.br/wp-content/uploads/2025/02/Nie-8-scaled.jpg",
+      "image": "https://images.unsplash.com/photo-1521339076979-133d0da2af1c?w=400&h=300&fit=crop",
       "tags": [
         "dates"
       ],
@@ -521,77 +520,3 @@
     }
   ]
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
