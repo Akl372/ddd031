@@ -92,15 +92,17 @@ function salvarFavoritos() {
 function toggleFavorito(id) {
     const index = favoritos.indexOf(id);
     if (index > -1) {
-        // Se já está nos favoritos, remove
         favoritos.splice(index, 1);
     } else {
-        // Se não está, adiciona
         favoritos.push(id);
     }
     salvarFavoritos();
-    // Re-renderiza a aplicação para atualizar os ícones e a lista de favoritos
-    renderizarApp();
+    if (document.getElementById('home-content')) {
+        renderizarApp();
+    }
+    document.querySelectorAll(`.favorite-btn[data-id="${id}"]`).forEach(btn => {
+        btn.classList.toggle('active');
+    });
 }
 
 function isFavorito(id) {

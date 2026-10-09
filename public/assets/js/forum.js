@@ -25,10 +25,9 @@
 
   function currentUser() {
     try {
-      const raw = localStorage.getItem('userLogado');
+      const raw = sessionStorage.getItem('usuarioCorrente');
       if (!raw) return null;
       const user = JSON.parse(raw);
-      // expected shape from existing login.js usage: { nome, email, login, id }
       return user || null;
     } catch (_) {
       return null;

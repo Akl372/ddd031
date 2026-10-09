@@ -1,94 +1,178 @@
-# Código Fonte
+# DDD031
 
-A pasta `codigo` serve para a manter o programa que vocês vão construir no contexto dessa disciplina. Se necessário, descreva neste arquivo aspectos relevantes da estrutura de diretórios criada para organização do código do seu projeto.
+🇺🇸 English version below | 🇧🇷 [Clique aqui para a versão em Português](#português)
 
-**IMPORTANTE**: O uso do JSON Server e do ambiente baseado no Node.js é obrigatório.
+🔗 **Live demo / Demo ao vivo:** https://ddd031.onrender.com
+👤 **Demo login / Login de demonstração:** `demo` / `demo123`
 
-Uma sugestão da estrutura de diretórios para o projeto é a seguinte:
+> ⏳ Free hosting tier (Render): first load after inactivity may take up to ~1 minute.
+> Hospedagem gratuita (Render): o primeiro acesso após inatividade pode levar até ~1 minuto.
 
-```plaintext
-codigo/  (essa pasta aqui)
-│
-├── db/
-│   └── db.json (estruturas de dados)
-│
-├── public/ (seu site - front end)
-│   ├── assets/
-│   │   ├── css/
-│   │   │   ├── styles.css
-│   │   │   └── (outros arquivos .css)
-│   │   │
-│   │   ├── images/
-│   │   │   ├── logo.png
-│   │   │   └── (outras imagens)
-│   │   │
-│   │   └── js/
-│   │       ├── app.js
-│   │       └── (outros arquivos .js)
-│   │
-│   ├── modulos/
-│   │   ├── login/
-│   │   │   ├── login.html
-│   │   │   └── index.html
-│   │   │
-│   │   └── details/
-│   │       └── details.html
-│   │
-│   ├── index.html (página inicial front end)
-│   ├── about.html
-│   └── (outras páginas)
-│
-│── index.js (app back end)
-│── package.json (configuração back end)
-└── README.md (este arquivo aqui)
+---
+
+## English
+
+### About
+
+DDD031 helps young people (18–30) discover places to go out in Belo Horizonte, Brazil —
+cafés, bars, restaurants, parks, and cultural spots — without needing to search across
+multiple sources. The focus is on accessible venues that don't require advance ticket
+purchases, making spontaneous discovery easy.
+
+Beyond listing places, the platform encourages interaction: users can favorite venues,
+discuss them in a forum, vote as a group on where to go ("Match"), or let a random pick
+decide ("Roulette").
+
+This repository is an individual, portfolio-oriented adaptation of a group academic
+project built for a first-semester Interdisciplinary Work course at PUC Minas (Brazil).
+
+### Original team
+
+| Name | Role |
+|---|---|
+| Alex de Castro Mendes Marques | UX/UI Design |
+| Júlia Michetti Costa Santos | Back-end Development |
+| **Matheus Akl Barbalho Falqueto** | **Front-end Development (me)** |
+
+**Faculty advisors:** Rommel Vieira Carneiro, Bernardo Guerra Pereira Cunha, Walisson Ferreira de Carvalho.
+
+### My contribution
+
+As the front-end developer, I was responsible for:
+- The **Favorites** feature (UI and logic)
+- The **Discoveries** section (home highlights)
+- **Random Place / Roulette**
+- **FAQ**
+- **Match** (group voting system)
+
+### Features
+
+- 🏠 **Home:** featured places, search by name/category, tag filters
+- ❤️ **Favorites:** save preferred venues (per user)
+- 🗨️ **Forum:** create threads and replies, filter by category and tags
+- 🎲 **Roulette:** randomly picks a place
+- 🤝 **Match:** group voting system to decide on a place
+- 💑 **Dates:** section dedicated to date spots
+- ❓ **FAQ:** 18 frequently asked questions
+- 🗺️ **Map:** general view of Belo Horizonte
+- 👥 **About Us:** team presentation
+
+### Tech stack
+
+- **Back-end:** Node.js, Express, [json-server](https://github.com/typicode/json-server) (REST API)
+- **Front-end:** Vanilla JavaScript, HTML, CSS
+- **Maps:** Leaflet + OpenStreetMap
+- **Hosting:** Render
+
+### Project structure
+
+```
+├── server.js          # Express + json-server
+├── db/db.json          # Database (places, users, forum, FAQ)
+└── public/              # Front-end
+    ├── index.html, favorites.html, forum.html, match.html, roulette.html...
+    └── assets/
+        ├── js/          # Page logic
+        ├── css/          # Styles
+        └── images/       # Images and avatars
 ```
 
-## Parte Front End
+### Run locally
 
-Para montar seu site, edite os arquivos existentes e crie novos arquivos na pasta `public` que mantem todos os arquivos da parte de Front End do site, a interface que é vista pelo usuário no navegador.
+```bash
+git clone https://github.com/Akl372/ddd031.git
+cd ddd031
+npm install
+npm start
+```
+Visit `http://localhost:3000`.
 
-Nesta pasta public, sugerimos que você organize os arquivos do seu site da seguinte maneira:
+### Known limitations
 
-* Arquivo `index.html`: arquivo que representa a "home page" do site.
-* Pasta `assets`: os arquivos de formatação (CSS), os scripts (JS), as imagens utilizadas no site (JPG, PNG, GIF, SVG, etc), fontes (TTF) e outros arquivos gerais utilizados por todo o site.
-* Pasta `modulos`: os arquivos utilizados na implementação das funcionalidades do site. Separe uma sub-pasta para cada novo módulo ou funcionalidade. Pode também ser utilizado para dividir o trabalho de cada membro do grupo.
+- The forum ships with sample threads for demo purposes; new posts don't persist
+  permanently, since the free hosting tier has no persistent database between restarts.
+- The map currently shows Belo Horizonte generally, without individual markers for the
+  21 listed places — a planned improvement for a future version.
 
+### License
 
-## Parte Back End
+Academic project under the CC-BY-4.0 license, following the original group repository.
 
-Para esse projeto, vamos utilizar o ambiente de execução **[Node.js](https://nodejs.org/)** para montar um Back End bem simplificado, porém poderoso que utiliza o módulo **[JSON Server](https://github.com/typicode/json-server#readme)**. Não se preocupe, você não precisa conhecer como programar para o ambiente Node.js e nem alterar estes arquivos para colocar o seu site funcionando.
+---
 
-Na pasta `codigo`, você vai encontrar os seguintes arquivos e pastas associados à estrutura de Back End:
+## Português
 
-* Pasta `db`: local onde é armazenado o arquivo com as estruturas de dados utilizadas pela aplicação. O conteúdo é composto apenas pelo arquivo `db.json`.
-* Arquivo `index.js`: arquivo que inicializa o módulo JSON Server que oferece um servidor web e a aplicação de back end que fornece uma API RESTful a partir do arquivo `db.json`. Evite alterar o arquivo `index.js`.
-* Arquivo `package.js`: arquivo com as configurações do projeto Node.js.
+### Sobre o projeto
 
-## Configuração e execução do ambiente
+O DDD031 é uma plataforma web que ajuda jovens de 18 a 30 anos a descobrir onde sair em
+Belo Horizonte — cafés, bares, restaurantes, parques e pontos culturais — sem precisar
+pesquisar em múltiplos lugares. O foco é em locais acessíveis, que não exigem compra
+antecipada de ingresso, facilitando descobertas espontâneas.
 
-Para executar o JSON Server e permitir o acesso ao seu site, você deverá instalar o Node.js no seu computador. Para isso siga as instruções no site do [**Node.js**](https://nodejs.org/), fazendo o download da versão LTS (versão mais estável do ambiente).
+Além de listar lugares, o site promove interação entre os usuários: eles podem favoritar
+locais, discutir no fórum, decidir onde ir em grupo através de uma votação (Match), ou
+deixar a sorte escolher (Roleta).
 
-Assim que o Node.js estiver instalado no seu computador, siga os passos a seguir:
+Este repositório é uma adaptação individual, com fins de portfólio, de um projeto
+acadêmico desenvolvido em trio para a disciplina de Trabalho Interdisciplinar (1º período)
+da PUC Minas.
 
-1. Abra a pasta `codigo` dentro da sua IDE (por exemplo, Visual Studio Code)
-2. Abra uma janela de terminal e certifique-se que a pasta do terminal é a pasta `codigo`
-3. Execute o comando `npm install` para recriar a pasta `node_modules` e instalar todos os pacotes necessários para o ambiente de desenvolvimento (Ex: JSON Server).
-4. Execute o comando `npm start` para iniciar o JSON Server e permitir que você consiga acessar o seu site no navegador.
-5. Para testar o projeto:
-   1. **Site Front End**: abra um navegador e acesse o seu site pela seguinte URL:
-      [http://localhost:3000]()
-   2. **Site Back End**: abra o navegador e acesse as informações da estrutura de usuários por meio da API REST do JSON Server a partir da seguinte URL:
-      [http://localhost:3000/usuarios](http://localhost:3000/usuarios)
+### Equipe original
 
+| Nome | Função |
+|---|---|
+| Alex de Castro Mendes Marques | Design UX/UI |
+| Júlia Michetti Costa Santos | Desenvolvimento Back-end |
+| **Matheus Akl Barbalho Falqueto** | **Desenvolvimento Front-end (eu)** |
 
-## Dúvidas e Suporte
+**Professores responsáveis:** Rommel Vieira Carneiro, Bernardo Guerra Pereira Cunha, Walisson Ferreira de Carvalho.
 
-Se tiver dúvidas, procure a monitoria para que te ajudem a entender todo o ambiente e te ajudem na implementação do seu projeto.
+### Minha contribuição
 
-### Documentação JSONServer
-A documentação do JSONServer pode ser consultada na [página do módulo no NPM](https://www.npmjs.com/package/json-server/v/0.17.4).
+Como desenvolvedor front-end do projeto, fui responsável por:
+- Funcionalidade de **Favoritos** (interface e lógica)
+- Seção **Descobertas** (destaques da home)
+- **Lugar Aleatório / Roleta**
+- **FAQ**
+- **Match** (sistema de votação em grupo)
 
-### Portal de exemplos da disciplina DIW 
-Temos um site de exemplo de como implementar diversas funcionalidades úteis para projetos Web no contexto da disciplina. Acesse o [site de exemplo](https://github.com/webtech-network/lab-jsonserver). 
+### Funcionalidades
 
-Para implementação de funcionalidades avançadas, sugerimos o uso das seguintes bibliotecas/APIs: [FullCalendar](https://fullcalendar.io/), [Chart.js](https://www.chartjs.org/), [Mapbox](https://docs.mapbox.com/api/), para citar algumas.
+- 🏠 **Home:** lugares em destaque, busca por nome/categoria, filtros por tag
+- ❤️ **Favoritos:** salvar locais preferidos (por usuário)
+- 🗨️ **Fórum:** criação de tópicos e respostas, filtro por categoria e tags
+- 🎲 **Roleta:** sorteia um local aleatoriamente
+- 🤝 **Match:** sistema de votação para decidir um lugar em grupo
+- 💑 **Dates:** seção dedicada a locais para encontros
+- ❓ **FAQ:** 18 perguntas frequentes
+- 🗺️ **Mapa:** visualização geral de Belo Horizonte
+- 👥 **Sobre Nós:** apresentação da equipe
+
+### Tecnologias
+
+- **Back-end:** Node.js, Express, [json-server](https://github.com/typicode/json-server) (API REST)
+- **Front-end:** JavaScript puro (sem framework), HTML, CSS
+- **Mapas:** Leaflet + OpenStreetMap
+- **Hospedagem:** Render
+
+### Como rodar localmente
+
+```bash
+git clone https://github.com/Akl372/ddd031.git
+cd ddd031
+npm install
+npm start
+```
+Acesse `http://localhost:3000`.
+
+### Limitações conhecidas
+
+- O fórum vem com tópicos de exemplo para demonstração; novos posts não persistem
+  permanentemente, já que o plano gratuito de hospedagem não mantém um banco de dados
+  persistente entre reinícios.
+- O mapa mostra Belo Horizonte de forma geral, sem marcar individualmente os 21 locais
+  cadastrados — melhoria planejada para uma próxima versão.
+
+### Licença
+
+Projeto acadêmico sob licença CC-BY-4.0, conforme o repositório original do grupo.
