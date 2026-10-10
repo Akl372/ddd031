@@ -1,6 +1,6 @@
 # DDD031
 
-🇺🇸 English version below | 🇧🇷 [Clique aqui para a versão em Português](#português)
+ English version below | 🇧🇷 [Clique aqui para a versão em Português](#português)
 
 🔗 **Live demo / Demo ao vivo:** https://ddd031.onrender.com
 👤 **Demo login / Login de demonstração:** `demo` / `demo123`
