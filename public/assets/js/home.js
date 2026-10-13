@@ -91,18 +91,32 @@ function salvarFavoritos() {
 
 function toggleFavorito(id) {
     const index = favoritos.indexOf(id);
+    const isFav = index === -1; // true se vai VIRAR favorito agora
     if (index > -1) {
         favoritos.splice(index, 1);
     } else {
         favoritos.push(id);
     }
     salvarFavoritos();
+
     if (document.getElementById('home-content')) {
         renderizarApp();
+        return;
     }
+
+    // Fora da Home (ex.: Roleta), atualiza o botão na tela manualmente
     document.querySelectorAll(`.favorite-btn[data-id="${id}"]`).forEach(btn => {
-        btn.classList.toggle('active');
+        btn.classList.toggle('btn-primary', !isFav);
+        btn.classList.toggle('btn-danger', isFav);
+        btn.innerHTML = `<span class="favorite-btn-icon">${isFav ? '—' : '❤'}</span>${isFav ? 'Remover' : 'Favoritar'}`;
+        const card = btn.closest('.place-card');
+        if (card) card.classList.toggle('favorite', isFav);
     });
+
+    const modalBtn = document.getElementById('modalFavoriteBtn');
+    if (modalBtn && parseInt(modalBtn.dataset.id, 10) === id) {
+        modalBtn.textContent = isFav ? 'Remover dos Favoritos' : 'Adicionar aos Favoritos';
+    }
 }
 
 function isFavorito(id) {
