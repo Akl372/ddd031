@@ -8,7 +8,7 @@
     return places[idx];
   }
 
-  function renderPlace(place) {
+  function renderPlace(place, attachListeners = true) {
     const container = document.getElementById('roulette-container');
     if (!container) return;
 
@@ -28,7 +28,7 @@
     }
 
     // Ensure favorite/details buttons are wired (reuse adicionarEventListeners if present)
-    if (typeof adicionarEventListeners === 'function') {
+    if (attachListeners && typeof adicionarEventListeners === 'function') {
       // Slight delay to ensure DOM insertion
       setTimeout(() => adicionarEventListeners(), 20);
     }
@@ -65,25 +65,3 @@
 
       // Simula roleta: troca cards rapidamente por DURATION ms
       const DURATION = 1800; // ms
-      const INTERVAL = 80; // ms
-      let elapsed = 0;
-
-      const timer = setInterval(() => {
-        const p = pickRandom();
-        if (p) renderPlace(p);
-        elapsed += INTERVAL;
-        if (elapsed >= DURATION) {
-          clearInterval(timer);
-          // final selection
-          const final = pickRandom();
-          if (final) renderPlace(final);
-          spinning = false;
-          btn.disabled = false;
-          btn.textContent = 'Girar';
-        }
-      }, INTERVAL);
-    });
-  }
-
-  document.addEventListener('DOMContentLoaded', init);
-})();
