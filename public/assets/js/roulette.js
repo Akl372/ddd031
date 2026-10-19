@@ -65,3 +65,25 @@
 
       // Simula roleta: troca cards rapidamente por DURATION ms
       const DURATION = 1800; // ms
+      const INTERVAL = 80; // ms
+      let elapsed = 0;
+
+      const timer = setInterval(() => {
+        const p = pickRandom();
+        if (p) renderPlace(p, false);
+        elapsed += INTERVAL;
+        if (elapsed >= DURATION) {
+          clearInterval(timer);
+          // final selection
+          const final = pickRandom();
+          if (final) renderPlace(final);
+          spinning = false;
+          btn.disabled = false;
+          btn.textContent = 'Girar';
+        }
+      }, INTERVAL);
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', init);
+})();
